@@ -19,7 +19,7 @@ console.log(superHeroes.filter(v => v.tipo == "DC").map(v => v.nombre = `CAMBIAD
 // 3
 console.log("ejercicio 3");
 
-console.log(superHeroes.filter(v => v.tipo == "DC").reduce((prev, v) => prev + 1, 0))
+console.log(superHeroes.filter(v => v.tipo == "DC").length)
 
 // 4
 console.log("ejercicio 4");
