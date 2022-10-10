@@ -2003,7 +2003,7 @@ const inputObj = inputText.split("\n").map((v) => v = parseInt(v));
 
 let t = 0;
 inputObj.forEach((v, i, arr) => {
-    if (i > 0 && v > arr[i - 1])
+    if (v > arr[i - 1])
         t++;
 });
 console.log(t);
