@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="texto">
+        <button class="calcular">calcular</button>
+
+        <ul class="resultados">
+
+        </ul>
+
+        <script>
+            const calcularBtnElem = document.getElementsByClassName("calcular")[0];
+
+            const textElem = document.getElementById("texto");
+
+            const resultadosElem = document.getElementsByClassName("resultados")[0];
+
+            calcularBtnElem.addEventListener("click", () => {
+                if (textElem.value == "")
+                    return;
+
+                const entrada = parseInt(textElem.value, 10);
+
+                const elem = document.createElement("li");
+                elem.textContent = 4/3*3.14*entrada**3;
+
+                const frag = document.createDocumentFragment();
+                frag.append(elem);
+
+                resultadosElem.append(frag);
+
+                textElem.value = "";
+                textElem.focus();
+            });
+
+        </script>
+    </body>
+</html>

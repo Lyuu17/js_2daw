@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="texto">
+        <button class="enviar">enviar</button>
+
+        <ul class="lista">
+
+        </ui>
+
+        <script>
+            const btnElem = document.getElementsByClassName("enviar")[0];
+            const lstElem = document.getElementsByClassName("lista")[0];
+
+            const textElem = document.getElementById("texto");
+
+            btnElem.addEventListener("click", () => {
+                console.log(textElem.value);
+
+                const elem = document.createElement("li");
+                elem.textContent = textElem.value;
+
+                lstElem.appendChild(elem);
+            });
+        </script>
+    </body>
+</html>

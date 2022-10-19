@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="entrada">
+        <button id="cambiar">cambiar</button>
+
+        <h1 id="cabecera"></h1>
+
+        <script>
+            const entrada = document.getElementById("entrada");
+
+            const cambiarBtn = document.getElementById("cambiar");
+
+            const cabecera = document.getElementById("cabecera");
+
+            cambiarBtn.addEventListener("click", () => {
+                cabecera.textContent = entrada.value;
+
+                entrada.value = "";
+                entrada.focus();
+            });
+        </script>
+    </body>
+</html>

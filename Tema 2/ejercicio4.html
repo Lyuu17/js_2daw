@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="texto">
+        <button class="añadir">añadir</button>
+        <button class="eliminar">eliminar</button>
+
+        <ul class="lista">
+
+        </ui>
+
+        <script>
+            const añadirBtnElem = document.getElementsByClassName("añadir")[0];
+            const eliminarBtnElem = document.getElementsByClassName("eliminar")[0];
+            const lstElem = document.getElementsByClassName("lista")[0];
+
+            const textElem = document.getElementById("texto");
+
+            añadirBtnElem.addEventListener("click", () => {
+                if (textElem.value == "")
+                    return;
+
+                const elem = document.createElement("li");
+                elem.textContent = textElem.value;
+
+                textElem.value = "";
+
+                lstElem.appendChild(elem);
+            });
+
+            eliminarBtnElem.addEventListener("click", () => {
+                if (textElem.value == "")
+                    return;
+
+                const elem = document.querySelectorAll("ul > li");
+                for(let i = 0; i < elem.length; i++)
+                {
+                    if (elem[i].textContent != textElem.value)
+                        continue;
+                    
+                    textElem.value = "";
+
+                    lstElem.removeChild(elem[i]);
+
+                    break;
+                }
+            });
+        </script>
+    </body>
+</html>

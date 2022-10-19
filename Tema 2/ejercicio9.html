@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p id="pos"></h1>
+
+        <script>
+            const posElem = document.getElementById("pos");
+            addEventListener("mousemove", (event) => {
+                posElem.textContent = "x: " + event.x + ", y: " + event.y;
+            });
+        </script>
+    </body>
+</html>

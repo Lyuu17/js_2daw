@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="texto">
+        <button class="enviar">enviar</button>
+
+        <script>
+            document.getElementsByClassName("enviar")[0].addEventListener("click", () => {
+                console.log(document.getElementById("texto").value);
+            });
+        </script>
+    </body>
+</html>

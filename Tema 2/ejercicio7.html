@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="titulo"></title>
+    </head>
+    <body>
+        <input type="text" id="entrada">
+        <button id="cambiar">cambiar</button>
+
+        <script>
+            const entrada = document.getElementById("entrada");
+
+            const cambiarBtn = document.getElementById("cambiar");
+
+            const titulo = document.getElementById("titulo");
+
+            cambiarBtn.addEventListener("click", () => {
+                titulo.textContent = entrada.value;
+
+                entrada.value = "";
+                entrada.focus();
+            });
+        </script>
+    </body>
+</html>

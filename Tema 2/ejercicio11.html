@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+        <select>
+            <option id="posx"></option>
+            <option id="posy"></option>
+            <option id="lmb"></option>
+        </select>
+
+        <script>
+            const optPosX = document.getElementById("posx");
+            const optPosY = document.getElementById("posy");
+            const optLMB = document.getElementById("lmb");
+            addEventListener("mousemove", (event) => {
+                optPosX.textContent = `x: ${event.x}`;
+                optPosY.textContent = `y: ${event.y}`;
+            });
+            addEventListener("mousedown", (event) => {
+                if (event.which == 1)
+                    optLMB.textContent = "LMB";
+            });
+        </script>
+    </body>
+</html>
