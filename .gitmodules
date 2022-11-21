@@ -1,0 +1,3 @@
+[submodule "Proyectos/Breaking Bad/breakingbad"]
+	path = Proyectos/Breaking Bad/breakingbad
+	url = https://github.com/Lyuu17/breakingbad_vueapi.git
